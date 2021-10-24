@@ -1,0 +1,9 @@
+ import matplotlib.pyplot as plt
+ import matplotlib.image as mpimg
+ img = mpimg.imread('C:/Users/HuyTran/Desktop/Project/FDD/greyscale/dog.png')
+ imgplot = plt.imshow(img)
+ lum_img = img[:, :, 0]
+ plt.imshow(lum_img)
+ imgplot = plt.imshow(lum_img)
+ imgplot.set_cmap('nipy_spectral')
+ plt.show()

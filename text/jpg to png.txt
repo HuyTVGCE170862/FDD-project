@@ -1,0 +1,4 @@
+from PIL import Image
+
+im = Image.open('Foto.jpg')
+im.save('Foto.png')

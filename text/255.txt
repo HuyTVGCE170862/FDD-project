@@ -1,0 +1,13 @@
+import imageio
+import matplotlib.pyplot as plt
+import warnings
+import matplotlib.cbook
+warnings.filterwarnings("ignore",category=matplotlib.cbook.mplDeprecation)
+pic=imageio.imread('F:/Project/FDD/png/new demo.png')
+plt.figure(figsize=(6,6))
+plt.imshow(pic);
+plt.axis('off');
+negative =255- pic
+plt.figure(figsize= (6,6))
+plt.imshow(negative);
+plt.axis('off');

@@ -1,0 +1,20 @@
+from PIL import Image
+from numpy import *
+
+def pca(X):
+    num_data,dim = X.shape
+    mean_X = X.meab(axis=0)
+    if dim>num_data:
+        M = dot(X,X.T)
+        e,EV = linalg.eigh(M)
+        tmp = dot(X.T,EV).T
+        V = tmp[::-1]
+        S = sqrt(e)[::-1]
+        for i in range(V.shape[1]):
+            V[:,i] /= S
+
+    else:
+        U,S,V = linalg.svd(x)
+        V = V[:num_data]
+
+    return V,S,mean_X

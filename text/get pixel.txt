@@ -1,0 +1,5 @@
+from PIL import Image
+img = Image.open('C:/Users/Huytran/Desktop/Project/FDD/greyscale/dog.png')
+img.thumbnail((128, 128), Image.ANTIALIAS)
+imgplot = plt.imshow(img)
+plt.show()
